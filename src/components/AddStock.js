@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
 
-class ViewAll extends Component {
-
-
+class AddStock extends Component {
     render() {
-        return(
-            <div style={{"margin": "auto",
-                 
-            "width": "50%",
+        return (
+            <div style={{"margin": "auto",                 
+            "width": "20%",
             "padding": "30px"
             }}><a href="/all-stocks">
                 <button style={{                 
                  "width": "40%",
                  "padding": "30px",
                  "color": "green"}}>
-                     View All Stocks
+                     Add Stock
                      </button>
             </a>
             </div>
-        )
+        );
     }
 }
 
-export default ViewAll;
+export default AddStock;
