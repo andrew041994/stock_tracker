@@ -43,12 +43,9 @@ export default class StockTape extends Component {
       "width": "100%",
       "padding": "0px"
       }}> 
-      <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a></div>
-        <script type="text/javascript"  async>
-      
-        </script>
+      <div className="tradingview-widget-container">
+        <div className="tradingview-widget-container__widget"></div>
+        <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com" ></a></div>
       </div>
     </div>
     );
