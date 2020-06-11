@@ -6,7 +6,7 @@ class AddStock extends Component {
             <div style={{"margin": "auto",                 
             "width": "20%",
             "padding": "30px"
-            }}><a href="/all-stocks">
+            }}><a href="/add-stock">
                 <button style={{                 
                  "width": "40%",
                  "padding": "30px",

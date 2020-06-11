@@ -2,6 +2,7 @@ import React from "react";
 import MainContainer from "./containers/MainContainer";
 import { Route, Switch} from "react-router-dom";
 import AllStocks from "./components/AllStocks";
+import StockForm from "./components/StockForm";
 
 function App() {
   const NotFound = () => {
@@ -22,9 +23,9 @@ function App() {
 	return (
     <Switch>
 
-      <Route component={MainContainer} exact path="/" />
-      
+      <Route component={MainContainer} exact path="/" />      
       <Route component={AllStocks} exact path="/all-stocks" />
+      <Route component={StockForm} exact path="/add-stock" />
       <Route path='*' component={NotFound}  />
     </Switch>
   
