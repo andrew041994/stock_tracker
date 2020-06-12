@@ -1,7 +1,20 @@
 
 
 export default function manageStocks(state = {
-  stocks: [],
+  stocks: [], loading: false
 }, action) {
-      return state;
+    switch (action.type) {
+      case 'LOADING_STOCKS':
+      return {
+        ...state,
+        stocks: [...state.stocks],
+        loading: true
+      }
+      case 'ADD_STOCKS':
+        return state
+    
+      default:
+        return state;
+    }
+      
   }
