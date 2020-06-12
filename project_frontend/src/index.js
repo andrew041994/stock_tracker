@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import manageStocks from './reducers/manageStocks';
 
-let store = createStore(manageStocks, applyMiddleware(thunk))
+const store = createStore(manageStocks, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
