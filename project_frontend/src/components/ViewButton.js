@@ -6,7 +6,7 @@ class ViewButton extends Component {
 
     handleClick = (e) => {
         e.preventDefault()
-        this.props.getStock(this.props.stock.id)
+        this.props.getStock(e.target.value)
 
 
     }
@@ -25,7 +25,7 @@ class ViewButton extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getStock: () => dispatch(getStock())
+        getStock: (id) => dispatch(getStock(id))
     }
 }
 
