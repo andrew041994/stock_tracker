@@ -3,6 +3,7 @@ import MainContainer from "./containers/MainContainer";
 import { Route, Switch} from "react-router-dom";
 import AllStocks from "./components/AllStocks";
 import StockForm from "./components/StockForm";
+import ViewStock from "./components/ViewStock";
 
 function App() {
   const NotFound = () => {
@@ -24,8 +25,9 @@ function App() {
     <Switch>
 
       <Route component={MainContainer} exact path="/" />      
-      <Route component={AllStocks} exact path="/all-stocks" />
+      <Route component={AllStocks} exact path="/stocks" />
       <Route component={StockForm} exact path="/add-stock" />
+      <Route component={ViewStock} exact path={`/stocks/:stockId`}/>
       <Route path='*' component={NotFound}  />
     </Switch>
   

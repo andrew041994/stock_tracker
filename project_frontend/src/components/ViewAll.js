@@ -9,7 +9,7 @@ class ViewAll extends Component {
                  
             "width": "50%",
             "padding": "30px"
-            }}><a href="/all-stocks">
+            }}><a href="/stocks">
                 <button style={{                 
                  "width": "40%",
                  "padding": "30px",

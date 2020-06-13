@@ -1,3 +1,5 @@
+
+
 export const fetchStocks = () => {
     return (dispatch) => {
         dispatch({type:'LOADING_STOCKS'})
@@ -7,4 +9,8 @@ export const fetchStocks = () => {
     }
 
 
+}
+
+export const getStock = (id) => {
+    return {type: 'GET_STOCK', id:id}
 }
