@@ -12,7 +12,7 @@ class AllStocks extends Component {
     this.props.fetchStocks()
 }
   render() {
-    console.log(this.props.stocks)
+    console.log(this.props)
     return (
         <div> 
           <StockTape />          
@@ -34,8 +34,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = state => {
   return {
-    stocks: state.stocks,
-    loading: state.loading
+    stocks: state.stocks
   }
 }
 

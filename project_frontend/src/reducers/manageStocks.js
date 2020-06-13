@@ -16,11 +16,9 @@ export default function manageStocks(state = {
             stocks: action.stocks,
             loading:false
           }
-        case 'GET_STOCK':
-          return {
-            ...state,
-            stock: state.stocks.filter(stock => stock.id === action.id)
-          }
+        // case 'GET_STOCK':
+        //   console.log(action)
+         
           
       
         default:

@@ -3,8 +3,8 @@
 export const fetchStocks = () => {
     return (dispatch) => {
         dispatch({type:'LOADING_STOCKS'})
-        fetch("http://localhost:3000/stocks")
-        .then(resp => resp.json())
+        return fetch("http://localhost:3000/stocks")
+        .then(resp => {return resp.json()})
         .then(resp => {dispatch({type:'ADD_STOCKS', stocks: resp})})
     }
 
@@ -12,5 +12,8 @@ export const fetchStocks = () => {
 }
 
 export const getStock = (id) => {
-    return {type: 'GET_STOCK', id:id}
-}
+    console.log(id)
+    return {
+        type: 'GET_STOCK', id: id
+    }
+    }

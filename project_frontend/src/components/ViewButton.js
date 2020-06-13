@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 class ViewButton extends Component {
 
     handleClick = (e) => {
-        e.preventDefault()
-        this.props.getStock(e.target.value)
+    // e.preventDefault()
+        // console.log(this.props.stock)
+        this.props.getStock(this.props.stock.id)
 
 
     }
@@ -16,7 +17,7 @@ class ViewButton extends Component {
     return (
       <div> 
           <a href={'/stocks/' + this.props.stock.id}>
-        <button onClick={(event) => this.handleClick(event)}>View</button>    
+        <button >View</button>    
         </a> 
       </div>
     );
