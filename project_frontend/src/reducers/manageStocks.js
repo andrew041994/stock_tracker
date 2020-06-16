@@ -10,7 +10,7 @@ export default function manageStocks(state = {
             stocks: [...state.stocks],
             loading:true
           }
-        case 'ADD_STOCKS':
+        case 'LOAD_STOCKS':
           return {
             ...state,
             stocks: action.stocks,

@@ -12,15 +12,13 @@ class AllStocks extends Component {
     this.props.fetchStocks()
 }
   render() {
-    console.log(this.props)
+   
     return (
         <div> 
           <StockTape />          
           <AddStock />
 
           {this.props.stocks.map(stock => <StockCard key={stock.id} stock={stock}/>)}
-        
-        <li>list all stocks here </li>
        
       </div>
     );

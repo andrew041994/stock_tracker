@@ -1,33 +1,35 @@
 import React, { Component } from 'react';
-import{ getStock} from '../actions/stockActions'
+// import{ getStock} from '../actions/stockActions'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
+
 
 class ViewButton extends Component {
 
-    handleClick = (e) => {
-    // e.preventDefault()
-        // console.log(this.props.stock)
-        this.props.getStock(this.props.stock.id)
+    // handleClick = (e) => {
+    // // e.preventDefault()
+    //     // console.log(this.props.stock)
+    //     this.props.getStock(this.props.stock.id)
 
 
-    }
+    // }
 
 
   render() {
     return (
       <div> 
-          <a href={'/stocks/' + this.props.stock.id}>
+        <Link to={'/stocks/' + this.props.stock.id}>
         <button >View</button>    
-        </a> 
+        </Link>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getStock: (id) => dispatch(getStock(id))
-    }
-}
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         getStock: (id) => dispatch(getStock(id))
+//     }
+// }
 
-export default connect(null, mapDispatchToProps)(ViewButton)
+export default ViewButton
