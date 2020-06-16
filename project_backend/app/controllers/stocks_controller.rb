@@ -1,6 +1,7 @@
 class StocksController < ApplicationController
 
-    def index
+    def index 
+      # byebug
       stocks = Stock.all
       render json: stocks
     end
@@ -11,7 +12,8 @@ class StocksController < ApplicationController
     end
 
     def create 
-      stock = Stock.new(stock_params)
+      stock = Stock.create(stock_params)
+      # byebug
       render json: stock
     end
 
