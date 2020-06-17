@@ -17,6 +17,13 @@ class StocksController < ApplicationController
       render json: stock
     end
 
+    def destroy
+      # byebug
+      Stock.find_by(id: params[:id]).destroy
+
+      render json: { Message: 'Stock Destroyed' }
+    end
+
 
 
     private 

@@ -6,12 +6,19 @@ import { connect } from 'react-redux';
 import { fetchStocks } from '../actions/stockActions';
 
 
+
 class AllStocks extends Component {
 
   componentDidMount() {
     this.props.fetchStocks()
 }
+
+
+
+
+
   render() {
+    console.log()
    
     return (
         <div> 
@@ -32,7 +39,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = state => {
   return {
-    stocks: state.stocks
+    stocks: state.stocks,
+    message: state.message
   }
 }
 

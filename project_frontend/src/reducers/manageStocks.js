@@ -1,7 +1,7 @@
 
 
 export default function manageStocks(state = {
-  stocks: [], loading: false
+  stocks: [], loading: false, message: ""
 }, action) {
       switch (action.type) {
         case 'LOADING_STOCKS':
@@ -16,8 +16,11 @@ export default function manageStocks(state = {
             stocks: action.stocks,
             loading:false
           }
-        // case 'GET_STOCK':
-        //   console.log(action)
+        case 'ADD_MESSAGE':
+          return { 
+              ...state,
+              message: action.message
+          }
          
           
       

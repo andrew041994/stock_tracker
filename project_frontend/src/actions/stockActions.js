@@ -11,8 +11,8 @@ export const fetchStocks = () => {
 	};
 };
 
-export const sendStock = (stockInfo, history) => {
-	console.log(stockInfo.name);
+export const sendStock = (stockInfo) => {
+	
 	const stock = {
 		stock: {
 			name: stockInfo.name + "",
@@ -21,18 +21,37 @@ export const sendStock = (stockInfo, history) => {
 			selling_price: stockInfo.sellingPrice + "",
 		},
 	};
-	const options = {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify(stock),
-	};
+	
 	return (dispatch) => {
-		fetch("http://localhost:3000/stocks", options)
+        fetch("http://localhost:3000/stocks", 
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(stock)})
 			.then((resp) => resp.json())
 			.then((data) => {
 				dispatch(fetchStocks());
 			});
 	};
 };
+
+
+export const deleteStock = (id) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3000/stocks/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then(r => r.json())
+        .then((d) =>dispatch({type: "ADD_MESSAGE", message: d.Message}) )
+    }
+    // 
+}
+
+
+
+
