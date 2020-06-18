@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ViewButton from './ViewButton';
 export default class StockCard extends Component {
+  
   render() {
    
     return (

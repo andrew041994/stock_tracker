@@ -15,7 +15,6 @@ class StockForm extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		console.log(this.props.history.push);
 		this.props.sendStock(this.state);
 		this.props.history.push("/stocks");
 		this.setState({

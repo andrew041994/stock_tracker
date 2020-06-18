@@ -1,22 +1,14 @@
 import React, { Component } from 'react';
 import { fetchStocks, deleteStock } from '../actions/stockActions';
-import FlashMessage from 'react-flash-message'
+import Button from 'react-bootstrap/Button'
 import currencyFormatter from 'currency-formatter'
 
 import { connect } from 'react-redux';
 class ViewStock extends Component {
 
   componentDidMount() {  
-    const Message = () => (
-      <FlashMessage duration={5000}>
-        <strong>I will disapper in 5 seconds!</strong>
-      </FlashMessage>
-    )
-
     if (this.props.stocks.length === 0) {   
-      this.props.fetchStocks()
-      // console.log(this.props.message)
-     
+      this.props.fetchStocks()     
     }     
 }
 
@@ -32,7 +24,7 @@ handleDelete = (e) => {
     console.log(e.target.name)
     this.props.deleteStock(this.props.match.params.stockId)
     this.props.history.push("/stocks");
-  Message(e.target.name)
+  // Message(e.target.name)
 }
 
  
@@ -51,7 +43,7 @@ handleDelete = (e) => {
         <h5>Amount:{stock.amount}</h5>       
         <h5>Cost Per Share: {currencyFormatter.format(stock.purchase_price, {code: 'USD'})}</h5>
         <h5>Potential Selling Price: {currencyFormatter.format(stock.selling_price, {code: 'USD'})}</h5>
-        <button name={stock.name} onClick={(e) => this.handleDelete(e)} >DELETE</button>
+        <Button name={stock.name} onClick={(e) => this.handleDelete(e)} >DELETE</Button>
       </div>: null
       
 

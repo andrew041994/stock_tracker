@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import{ getStock} from '../actions/stockActions'
+import Button from 'react-bootstrap/Button'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
@@ -19,7 +19,9 @@ class ViewButton extends Component {
     return (
       <div> 
         <Link to={'/stocks/' + this.props.stock.id}>
-        <button >View</button>    
+        <Button variant="info">
+                    View Stock
+                     </Button>   
         </Link>
       </div>
     );

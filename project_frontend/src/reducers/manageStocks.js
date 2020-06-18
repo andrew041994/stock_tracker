@@ -21,6 +21,8 @@ export default function manageStocks(state = {
               ...state,
               message: action.message
           }
+
+        
          
           
       
