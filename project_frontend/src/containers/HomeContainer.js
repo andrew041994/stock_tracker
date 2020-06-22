@@ -15,7 +15,7 @@ class HomeContainer extends Component {
                 <Container fluid>
                 
                 <Row>
-                    <Col lg={{ span: 3, offset: 4 }} > <h3 style={{"margin": "auto", "width": "130%", "padding": "40px",
+                    <Col lg={{ span: 3, offset: 4 }} > <h3 style={{"margin": "auto", "width": "130%", "padding": "8px",
                       "color": "green"}}><strong>Welcome To Stock Tracker</strong></h3></Col>                
                 </Row>
                 <Row>

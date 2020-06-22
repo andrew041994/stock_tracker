@@ -1,6 +1,5 @@
 export const fetchStocks = () => {
 	return (dispatch) => {
-		// dispatch({type:'LOADING_STOCKS'})
 		fetch("http://localhost:3000/stocks")
 			.then((resp) => {
 				return resp.json();
@@ -39,17 +38,15 @@ export const sendStock = (stockInfo) => {
 
 
 export const deleteStock = (id) => {
-    return (dispatch) => {
+    return () => {
         fetch(`http://localhost:3000/stocks/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
             },
         })
-        .then(r => r.json())
-        .then((d) =>dispatch({type: "ADD_MESSAGE", message: d.Message}) )
     }
-    // 
+
 }
 
 

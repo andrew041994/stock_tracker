@@ -13,7 +13,7 @@ export default class StockCard extends Component {
       "color": "white"}} key={this.props.stock.id}>
        
         <h3><strong>{this.props.stock.name}</strong></h3> 
-        <h4><strong>Amount:{this.props.stock.amount}</strong></h4>
+        <h4><strong>Amount: {this.props.stock.amount}</strong></h4>
         <ViewButton stock={this.props.stock}/>
         
       </div>
