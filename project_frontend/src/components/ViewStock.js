@@ -36,13 +36,14 @@ handleDelete = (e) => {
     const stock = this.props.stocks.filter(stock => parseInt(stock.id, 10) === parseInt(this.props.match.params.stockId,10))[0]
     // console.log(stock)
       const view = stock ?  <div style={{"margin": "auto",
-      "width": "20%",
-      "padding": "10px",
-      "color": "green"}}>
-        <h3>{stock.name}</h3>
-        <h5>Amount:{stock.amount}</h5>       
-        <h5>Cost Per Share: {currencyFormatter.format(stock.purchase_price, {code: 'USD'})}</h5>
-        <h5>Potential Selling Price: {currencyFormatter.format(stock.selling_price, {code: 'USD'})}</h5>
+      "width": "30%",
+      "padding": "70px",
+      "color": "white"}}>
+        <h3><strong>{stock.name}</strong></h3>
+        <h5><strong>Amount: {stock.amount}</strong></h5>       
+        <h5><strong>Cost Per Share: {currencyFormatter.format(stock.purchase_price, {code: 'USD'})}</strong></h5>
+        <h5><strong>Potential Selling Price: {currencyFormatter.format(stock.selling_price, {code: 'USD'})}</strong></h5>
+        <h5><strong>Potential ROI: {currencyFormatter.format(stock.selling_price *stock.amount, {code: 'USD'})}</strong></h5>
         <Button name={stock.name} onClick={(e) => this.handleDelete(e)} >DELETE</Button>
       </div>: null
       
