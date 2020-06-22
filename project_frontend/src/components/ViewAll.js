@@ -13,7 +13,7 @@ class ViewAll extends Component {
             "width": "50%",
             "padding": "30px"
             }}><Link to="/stocks">
-                <Button variant="info">View All Stocks</Button>
+                <Button variant="info">View All Stocks</Button>{' '}
                 </Link>
             </div>
         )

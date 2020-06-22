@@ -22,8 +22,13 @@ class AllStocks extends Component {
    
     return (
         <div> 
-          <StockTape />          
+          <StockTape /> 
+          <h3 style={{"margin": "auto",
+      "width": "30%",
+      "padding": "20px",
+      "color": "white"}}><strong>Stocks You Currently Own:</strong></h3>          
           <AddStock />
+         
 
           {this.props.stocks.map(stock => <StockCard key={stock.id} stock={stock}/>)}
        

@@ -11,17 +11,20 @@ class HomeContainer extends Component {
 
     render() {
         return(
-            <div  >
+            <div  style={{"padding": "50px"}} >
                 <Container fluid>
-                <br></br>
+                
                 <Row>
-                 <Col md={{ span: 3, offset: 4 }} > <h3 text ="green">Welcome To Stock Tracker</h3></Col>                
+                    <Col md={{ span: 3, offset: 4 }} > <h3 style={{"margin": "auto", "width": "100%", "padding": "20px",
+      "color": "green"}}><strong>Welcome To Stock Tracker</strong></h3></Col>                
                 </Row>
                 <Row>
-                <Col md={{ span: 3, offset: 4 }} > < ViewAll /></Col>
+                    <Col md={{ span: 3, offset: 4 }} > < ViewAll /></Col>
                 </Row>
-                <Row>
-                    <Col lg={{ span: 0, offset: 1 }}> <TrendingStock /></Col>
+                <Row >
+                    <Col md={{ offset: 2 }}> 
+                     <TrendingStock />                    
+                    </Col> 
 
                 </Row>
                 

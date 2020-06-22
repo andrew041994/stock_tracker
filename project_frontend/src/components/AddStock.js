@@ -8,10 +8,10 @@ class AddStock extends Component {
 
     render() {
         return (
-            <div style={{"margin": "auto",                 
+            <div style={{"margin": "auto",
             "width": "20%",
-            "padding": "30px"
-            }}>
+            "padding": "10px",
+            "color": "white"}} >
                 <Link to="/add-stock">
                 <Button variant="info">
                      Add Stock

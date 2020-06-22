@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { sendStock } from "../actions/stockActions";
+import Button from 'react-bootstrap/Button'
 import { connect } from "react-redux";
 
 class StockForm extends Component {
@@ -32,8 +33,8 @@ class StockForm extends Component {
 		return (
 			<div style={{ margin: "auto", width: "20%", padding: "30px" }}>
 				<h1 style={{ color: "green" }}>Create a New Stock</h1>
-				<form onSubmit={(event) => this.handleSubmit(event)}>
-					<h3>Stock Name</h3>
+				<form style={{ color: "white" }} onSubmit={(event) => this.handleSubmit(event)}>
+					<h5>Stock Name</h5>
 					<input
 						type="text"
 						value={this.state.name}
@@ -42,7 +43,7 @@ class StockForm extends Component {
 						}}
 						name="name"
 					/>
-					<h3> Amount of Stock Purchased</h3>
+					<h5> Amount of Stock Purchased</h5>
 					<input
 						type="number"
 						min="0"
@@ -51,7 +52,7 @@ class StockForm extends Component {
 							this.setState({ amount: event.target.value });
 						}}
 					/>
-					<h3>Purchase Price per Stock</h3>
+					<h5>Purchase Price per Stock</h5>
 					<input
 						type="number"
 						min="0"
@@ -61,7 +62,7 @@ class StockForm extends Component {
 							this.setState({ purchasePrice: event.target.value });
 						}}
 					/>
-					<h3>Potential Selling Price</h3>
+					<h5>Potential Selling Price</h5>
 					<input
 						type="number"
 						min="0"
@@ -71,8 +72,8 @@ class StockForm extends Component {
 							this.setState({ sellingPrice: event.target.value });
 						}}
 					/>
-					<h3>Review and Save Your Stock</h3>
-					<input type="submit" />
+					<h5>Review and Save Your Stock</h5>
+					<Button type="submit">Submit</Button>
 				</form>
 			</div>
 		);
