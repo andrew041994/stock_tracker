@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 
 class AddStock extends Component {
 
@@ -11,9 +11,9 @@ class AddStock extends Component {
             "padding": "10px",
             "color": "white"}} >
                 <Link to="/add-stock">
-                <Button variant="info">
+                <button variant="info">
                      Add Stock
-                     </Button>
+                     </button>
                      </Link>
             </div>
         );

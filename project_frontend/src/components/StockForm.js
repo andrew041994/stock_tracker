@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { sendStock } from "../actions/stockActions";
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import { connect } from "react-redux";
 
 class StockForm extends Component {
@@ -74,7 +74,7 @@ class StockForm extends Component {
 						}}
 					/>
 					<h5>Review and Save Your Stock</h5>
-					<Button type="submit">Submit</Button>
+					<button type="submit">Submit</button>
 				</form>
 			</div>
 		);
