@@ -1,6 +1,8 @@
+const URL = "https://stoctracker.herokuapp.com/stocks"
+
 export const fetchStocks = () => {
 	return (dispatch) => {
-		fetch("http://localhost:3000/stocks")
+		fetch(URL)
 			.then((resp) => {
 				return resp.json();
 			})
@@ -22,7 +24,7 @@ export const sendStock = (stockInfo) => {
 	};
 	
 	return (dispatch) => {
-        fetch("http://localhost:3000/stocks", 
+        fetch(URL, 
         {
             method: "POST",
             headers: {
@@ -39,7 +41,7 @@ export const sendStock = (stockInfo) => {
 
 export const deleteStock = (id) => {
     return () => {
-        fetch(`http://localhost:3000/stocks/${id}`, {
+        fetch(URL + id , {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
