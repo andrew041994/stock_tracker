@@ -44,8 +44,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = state => {
   return {
-    stocks: state.stocks,
-    message: state.message
+    stocks: state.stocks
   }
 }
 

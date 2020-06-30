@@ -14,6 +14,9 @@ class StockForm extends Component {
 		};
 	}
 
+	// This binding is necessary to make `this` work in the callback
+    // this.handleClick = this.handleClick.bind(this);
+
 	handleSubmit(event) {
 		event.preventDefault();
 		this.props.sendStock(this.state);
@@ -24,16 +27,14 @@ class StockForm extends Component {
 			purchasePrice: 0.0,
 			sellingPrice: 0.0,
 		});
-
-		// console.log(JSON.stringify(this.state))
 	}
 
 	render() {
-		// console.log(this.state.name)
+
 		return (
 			<div style={{ margin: "auto", width: "20%", padding: "30px" }}>
 				<h1 style={{ color: "green" }}>Create a New Stock</h1>
-				<form style={{ color: "white" }} onSubmit={(event) => this.handleSubmit(event)}>
+				<form style={{ color: "white" }} onSubmit={this.handleSubmit}>
 					<h5>Stock Name</h5>
 					<input
 						type="text"
