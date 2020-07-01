@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { sendStock } from "../actions/stockActions";
-// import Button from 'react-bootstrap/Button'
+import Button from "react-bootstrap/Button";
 import { connect } from "react-redux";
 
 class StockForm extends Component {
@@ -15,7 +15,7 @@ class StockForm extends Component {
 	}
 
 	// This binding is necessary to make `this` work in the callback
-    // this.handleClick = this.handleClick.bind(this);
+	// this.handleClick = this.handleClick.bind(this);
 
 	handleSubmit(event) {
 		event.preventDefault();
@@ -30,7 +30,6 @@ class StockForm extends Component {
 	}
 
 	render() {
-
 		return (
 			<div style={{ margin: "auto", width: "20%", padding: "30px" }}>
 				<h1 style={{ color: "green" }}>Create a New Stock</h1>
@@ -74,7 +73,7 @@ class StockForm extends Component {
 						}}
 					/>
 					<h5>Review and Save Your Stock</h5>
-					<button type="submit">Submit</button>
+					<Button type="submit">Submit</Button>
 				</form>
 			</div>
 		);

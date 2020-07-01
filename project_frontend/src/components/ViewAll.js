@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 
 
 class ViewAll extends Component {
@@ -13,7 +13,7 @@ class ViewAll extends Component {
             "width": "50%",
             "padding": "30px"
             }}><Link to="/stocks">
-                <button variant="info">View All Stocks</button>{' '}
+                <Button variant="info">View All Stocks</Button>{' '}
                 </Link>
             </div>
         )

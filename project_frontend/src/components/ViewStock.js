@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { fetchStocks, deleteStock } from '../actions/stockActions';
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 import currencyFormatter from 'currency-formatter'
 
 import { connect } from 'react-redux';
@@ -44,7 +44,7 @@ handleDelete = (e) => {
         <h5><strong>Cost Per Share: {currencyFormatter.format(stock.purchase_price, {code: 'USD'})}</strong></h5>
         <h5><strong>Potential Selling Price: {currencyFormatter.format(stock.selling_price, {code: 'USD'})}</strong></h5>
         <h5><strong>Potential ROI: {currencyFormatter.format(stock.selling_price *stock.amount, {code: 'USD'})}</strong></h5>
-        <button name={stock.name} onClick={(e) => this.handleDelete(e)} >DELETE</button>
+        <Button name={stock.name} onClick={(e) => this.handleDelete(e)} >DELETE</Button>
       </div>: null
       
 

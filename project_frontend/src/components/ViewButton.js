@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 
 
@@ -12,7 +12,7 @@ class ViewButton extends Component {
     return (
       <div> 
         <Link to={'/stocks/' + this.props.stock.id}>
-        <button variant="info">View Stock</button>   
+        <Button variant="info">View Stock</Button>   
         </Link>
       </div>
     );
